@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+
+import Top from './components/top/Top.js'
+import Logo from './components/logo/Logo.js'
+
 import './App.css';
 
 class App extends Component{
@@ -38,7 +42,8 @@ class App extends Component{
     console.log(this.state.users);
     return (
       <div>
-      HAUNTED ATTRACTIONS
+      <Top />
+      <Logo />
       </div>
     );
 
