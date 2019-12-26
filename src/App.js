@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import Top from './components/top/Top.js'
 import Logo from './components/logo/Logo.js'
+import Filter from './components/filter/Filter.js'
+import Attractions from './components/attractions/Attractions.js'
 
 import './App.css';
 
@@ -44,6 +46,8 @@ class App extends Component{
       <div>
       <Top />
       <Logo />
+      <Filter />
+      <Attractions />
       </div>
     );
 
