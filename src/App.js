@@ -9,9 +9,9 @@ import './App.css';
 
 class App extends Component{
   state = {
-    attractions: {},
-    trips: {},
-    users: {}
+    attractions: [],
+    trips: [],
+    users: []
   }
 
   componentDidMount(){
@@ -21,19 +21,19 @@ class App extends Component{
   }
 
   getAllAttractions = () => {
-    fetch(`http://localhost:3000/api/v1/attractions`)
+    fetch(`http://localhost:4000/api/v1/attractions`)
     .then(res => res.json())
     .then(data => this.setState({attractions: data}))
   }
 
   getAllTrips = () => {
-    fetch(`http://localhost:3000/api/v1/trips`)
+    fetch(`http://localhost:4000/api/v1/trips`)
     .then(res => res.json())
     .then(data => this.setState({trips: data}))
   }
 
   getAllUsers = () => {
-    fetch(`http://localhost:3000/api/v1/users`)
+    fetch(`http://localhost:4000/api/v1/users`)
     .then(res => res.json())
     .then(data => this.setState({users: data}))
   }
@@ -47,7 +47,9 @@ class App extends Component{
       <Top />
       <Logo />
       <Filter />
-      <Attractions />
+      <Attractions
+       attractions={this.state.attractions}
+      />
       </div>
     );
 
